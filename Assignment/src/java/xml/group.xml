@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GroupList>
+   <groups>
+      <group>
+         <id>1</id>
+         <name>A</name>
+      </group>
+      <group>
+         <id>2</id>
+         <name>B</name>
+      </group>
+      <group>
+         <id>3</id>
+         <name>C</name>
+      </group>
+      <group>
+         <id>4</id>
+         <name>D</name>
+      </group>
+      <group>
+         <id>5</id>
+         <name>E</name>
+      </group>
+      <group>
+         <id>6</id>
+         <name>F</name>
+      </group>
+      <group>
+         <id>7</id>
+         <name>G</name>
+      </group>
+      <group>
+         <id>8</id>
+         <name>H</name>
+      </group>
+   </groups>
+</GroupList>

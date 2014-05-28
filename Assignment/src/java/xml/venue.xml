@@ -1,0 +1,68 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<VenuesList>
+   <venues>
+      <venue>
+         <city>Belo Horizonte</city>
+         <id>1</id>
+         <name>Estadio Mineirao</name>
+      </venue>
+      <venue>
+         <city>Brasilia</city>
+         <id>2</id>
+         <name>Estadio Nacional</name>
+      </venue>
+      <venue>
+         <city>Cuiaba</city>
+         <id>3</id>
+         <name>Arena Pantanal</name>
+      </venue>
+      <venue>
+         <city>Curitiba</city>
+         <id>4</id>
+         <name>Arena da Baixada</name>
+      </venue>
+      <venue>
+         <city>Fortaleza</city>
+         <id>5</id>
+         <name>Estadio Castelao</name>
+      </venue>
+      <venue>
+         <city>Manaus</city>
+         <id>6</id>
+         <name>Arena Amazonia</name>
+      </venue>
+      <venue>
+         <city>Natal</city>
+         <id>7</id>
+         <name>Estadio das Dunas</name>
+      </venue>
+      <venue>
+         <city>Porto Alegre</city>
+         <id>8</id>
+         <name>Estadio Beira-Rio</name>
+      </venue>
+      <venue>
+         <city>Recife</city>
+         <id>9</id>
+         <name>Arena Pernambuco</name>
+      </venue>
+      <venue>
+         <city>Rio De Janeiro</city>
+         <id>10</id>
+         <name>Estadio do Maracana</name>
+      </venue>
+      <venue>
+         <city>Salvador</city>
+         <id>11</id>
+         <name>Arena Fonte Nova</name>
+      </venue>
+      <venue>
+         <city>Sao Paulo</city>
+         <id>12</id>
+         <name>Arena de Sao Paulo</name>
+      </venue>
+   </venues>
+</VenuesList>
+
