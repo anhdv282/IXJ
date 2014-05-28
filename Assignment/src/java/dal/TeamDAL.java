@@ -29,11 +29,11 @@ import org.xml.sax.SAXException;
  * @author DANG
  */
 public class TeamDAL {
-    final static String GROUP = "team";
-    final static String CODE = "code";
-    final static String GROUPID = "group_id";
-    final static String ID = "id";
-    final static String NAME = "name";
+    private static final String GROUP = "team";
+    private static final String CODE = "code";
+    private static final String GROUPID = "group_id";
+    private static final String ID = "id";
+    private static final String NAME = "name";
     public List<Team> teamData(){
         List<Team> lst = new ArrayList<>();
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();

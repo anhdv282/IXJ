@@ -8,7 +8,7 @@
          <name>Brazil</name>
       </team>
       <team>
-         <code>HRV</code>
+         <code>CRC</code>
          <group_id>1</group_id>
          <id>2</id>
          <name>Croatia</name>
@@ -32,13 +32,13 @@
          <name>Spain</name>
       </team>
       <team>
-         <code>NLD</code>
+         <code>NED</code>
          <group_id>2</group_id>
          <id>6</id>
          <name>Netherlands</name>
       </team>
       <team>
-         <code>CHL</code>
+         <code>CHI</code>
          <group_id>2</group_id>
          <id>7</id>
          <name>Chile</name>
@@ -56,7 +56,7 @@
          <name>Colombia</name>
       </team>
       <team>
-         <code>GRC</code>
+         <code>GRE</code>
          <group_id>3</group_id>
          <id>10</id>
          <name>Greece</name>
@@ -74,7 +74,7 @@
          <name>Japan</name>
       </team>
       <team>
-         <code>URY</code>
+         <code>URU</code>
          <group_id>4</group_id>
          <id>13</id>
          <name>Uruguay</name>
@@ -98,7 +98,7 @@
          <name>Italy</name>
       </team>
       <team>
-         <code>CHE</code>
+         <code>SUI</code>
          <group_id>5</group_id>
          <id>17</id>
          <name>Switzerland</name>
@@ -116,7 +116,7 @@
          <name>France</name>
       </team>
       <team>
-         <code>HND</code>
+         <code>HON</code>
          <group_id>5</group_id>
          <id>20</id>
          <name>Honduras</name>
@@ -146,13 +146,13 @@
          <name>Nigeria</name>
       </team>
       <team>
-         <code>DEU</code>
+         <code>GER</code>
          <group_id>7</group_id>
          <id>25</id>
          <name>Germany</name>
       </team>
       <team>
-         <code>PRT</code>
+         <code>POR</code>
          <group_id>7</group_id>
          <id>26</id>
          <name>Portugal</name>
@@ -176,7 +176,7 @@
          <name>Belgium</name>
       </team>
       <team>
-         <code>DZA</code>
+         <code>ALG</code>
          <group_id>8</group_id>
          <id>30</id>
          <name>Algeria</name>

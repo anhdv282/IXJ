@@ -27,7 +27,7 @@
                 <td>${c.groupID}</td>
                 <td>${c.ID}</td>
                 <td>${c.name}</td>
-                <td><img src="http://img.fifa.com/images/flags/3/BRA.png"/></td>
+                <td><img src="http://img.fifa.com/images/flags/3/${c.code}.png"/></td>
             </tr>
         </s:iterator>
     </body>
