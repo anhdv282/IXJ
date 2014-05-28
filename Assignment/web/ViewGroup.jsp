@@ -21,6 +21,7 @@
                 <td>Name</td>
                 <td></td>
             </tr>
+
         <s:iterator var="c" value="lst">
             <tr>
                 <td>${c.code}</a></td>
