@@ -13,23 +13,36 @@
         <title>Group Page</title>
     </head>
     <body>
-        <table style="border-style: solid ;">
-            <tr style="border-style: solid ;">
-                <td>Code</td>
-                <td>Group ID</td>
-                <td>ID</td>
-                <td>Name</td>
-                <td></td>
-            </tr>
-
-        <s:iterator var="c" value="lst">
-            <tr>
-                <td>${c.code}</a></td>
-                <td>${c.groupID}</td>
-                <td>${c.ID}</td>
-                <td><a href="viewSchedule?team=${c.ID}">${c.name}</a></td>
-                <td><img src="http://img.fifa.com/images/flags/3/${c.code}.png"/></td>
-            </tr>
+        <s:iterator var="g" value="groups">
+            <h1>Group ${g.name}</h1>
+            <table style="border-style: solid ;">
+                <tr style="border-style: solid ;">
+                    <td></td>
+                    <td>Name</td>
+                    <td>MP</td>
+                    <td>W</td>
+                    <td>D</td>
+                    <td>L</td>
+                    <td>GF</td>
+                    <td>GA</td>
+                    <td>Pts</td>
+                </tr>
+            <s:iterator var="c" value="lst">
+                <s:if test="%{#c.groupID == #g.id}">
+                <tr>                                        
+                    <td><img src="http://img.fifa.com/images/flags/3/${c.code}.png"/></td>
+                    <td>${c.name}</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                </s:if>
+            </s:iterator>
+            </table>        
         </s:iterator>
     </body>
 </html>
