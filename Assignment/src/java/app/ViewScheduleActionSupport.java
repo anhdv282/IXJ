@@ -7,9 +7,8 @@
 package app;
 
 import com.opensymphony.xwork2.ActionSupport;
-import entities.Group;
+import dal.MatchDAL;
 import entities.Match;
-import entities.Team;
 import java.util.List;
 
 /**
@@ -19,8 +18,24 @@ import java.util.List;
 public class ViewScheduleActionSupport extends ActionSupport {
     
     private List<Match> matchs;
-    private Team team;
-    private Group group;
+    private int team = 0;
+    private String date = "";
+
+    public int getTeam() {
+        return team;
+    }
+
+    public void setTeam(int team) {
+        this.team = team;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
 
     public List<Match> getMatchs() {
         return matchs;
@@ -29,28 +44,21 @@ public class ViewScheduleActionSupport extends ActionSupport {
     public void setMatchs(List<Match> matchs) {
         this.matchs = matchs;
     }
-
-    public Team getTeam() {
-        return team;
-    }
-
-    public void setTeam(Team team) {
-        this.team = team;
-    }
-
-    public Group getGroup() {
-        return group;
-    }
-
-    public void setGroup(Group group) {
-        this.group = group;
-    }
     
     public ViewScheduleActionSupport() {
     }
     
     public String execute() throws Exception {
-        throw new UnsupportedOperationException("Not supported yet.");
+        MatchDAL matchDAL = new MatchDAL();
+        if (team > 0) {
+            matchs = matchDAL.getMatchByTeam(team);
+            return "team";
+        } else if (!date.isEmpty()) {
+            matchs = matchDAL.getMatchByDate(date);
+            return "date";
+        }
+        matchs = matchDAL.getAllMatch();
+        return SUCCESS;
     }
     
 }

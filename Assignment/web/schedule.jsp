@@ -26,10 +26,10 @@
                 <tr>
                     <td>${m.id}</a></td>
                     <td>${m.stage}</td>
-                    <td>${c.kickoff}</td>
-                    <td>${c.team1}</td>
-                    <td>${c.team2}</td>
-                    <td>${c.venue}</td>
+                    <td>${m.kickoff}</td>
+                    <td>${m.team1}</td>
+                    <td>${m.team2}</td>
+                    <td>${m.venue}</td>
                 </tr>
             </s:iterator>
         </table>

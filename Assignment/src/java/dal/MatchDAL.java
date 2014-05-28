@@ -101,4 +101,72 @@ public class MatchDAL {
         }
         return null;
     }
+    
+    public List<Match> getMatchByTeam(int team){
+        List<Match> lst = new ArrayList<>();
+        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+        ServletContext context = ServletActionContext.getServletContext();
+        String path = context.getRealPath("/xml/match.xml");
+        try {
+            DocumentBuilder builder = dbf.newDocumentBuilder();
+            File f = new File(path);
+            Document doc = builder.parse(f);
+            NodeList nodeList = doc.getElementsByTagName(MATCH);
+            for (int i = 0; i < nodeList.getLength(); i++) {
+                Node temp = nodeList.item(i);
+                Element element = (Element)temp;
+                if (Integer.parseInt(element.getElementsByTagName(TEAM1ID).item(0).getTextContent()) == team || Integer.parseInt(element.getElementsByTagName(TEAM2ID).item(0).getTextContent()) == team) {
+                    Match match = new Match();
+                    match.setId(Integer.parseInt(element.getElementsByTagName(ID).item(0).getTextContent()));
+                    match.setKickoff(element.getElementsByTagName(KICKOFF).item(0).getTextContent());
+                    match.setStage(Integer.parseInt(element.getElementsByTagName(STAGE).item(0).getTextContent()));
+                    match.setTeam1(Integer.parseInt(element.getElementsByTagName(TEAM1ID).item(0).getTextContent()));
+                    match.setTeam2(Integer.parseInt(element.getElementsByTagName(TEAM2ID).item(0).getTextContent()));
+                    match.setVenue(Integer.parseInt(element.getElementsByTagName(VENUEID).item(0).getTextContent()));
+                    lst.add(match);
+                }
+            }
+        } catch (ParserConfigurationException ex) {
+            Logger.getLogger(MatchDAL.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SAXException ex) {
+            Logger.getLogger(MatchDAL.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(MatchDAL.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return lst;
+    }
+    
+    public List<Match> getMatchByDate(String date){
+        List<Match> lst = new ArrayList<>();
+        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+        ServletContext context = ServletActionContext.getServletContext();
+        String path = context.getRealPath("/xml/match.xml");
+        try {
+            DocumentBuilder builder = dbf.newDocumentBuilder();
+            File f = new File(path);
+            Document doc = builder.parse(f);
+            NodeList nodeList = doc.getElementsByTagName(MATCH);
+            for (int i = 0; i < nodeList.getLength(); i++) {
+                Node temp = nodeList.item(i);
+                Element element = (Element)temp;
+                if (element.getElementsByTagName(KICKOFF).item(0).getTextContent().toLowerCase().equals(date.toLowerCase())) {
+                    Match match = new Match();
+                    match.setId(Integer.parseInt(element.getElementsByTagName(ID).item(0).getTextContent()));
+                    match.setKickoff(element.getElementsByTagName(KICKOFF).item(0).getTextContent());
+                    match.setStage(Integer.parseInt(element.getElementsByTagName(STAGE).item(0).getTextContent()));
+                    match.setTeam1(Integer.parseInt(element.getElementsByTagName(TEAM1ID).item(0).getTextContent()));
+                    match.setTeam2(Integer.parseInt(element.getElementsByTagName(TEAM2ID).item(0).getTextContent()));
+                    match.setVenue(Integer.parseInt(element.getElementsByTagName(VENUEID).item(0).getTextContent()));
+                    lst.add(match);
+                }
+            }
+        } catch (ParserConfigurationException ex) {
+            Logger.getLogger(MatchDAL.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SAXException ex) {
+            Logger.getLogger(MatchDAL.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(MatchDAL.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return lst;
+    }
 }

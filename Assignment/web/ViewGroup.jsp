@@ -27,7 +27,7 @@
                 <td>${c.code}</a></td>
                 <td>${c.groupID}</td>
                 <td>${c.ID}</td>
-                <td>${c.name}</td>
+                <td><a href="viewSchedule?team=${c.ID}">${c.name}</a></td>
                 <td><img src="http://img.fifa.com/images/flags/3/${c.code}.png"/></td>
             </tr>
         </s:iterator>

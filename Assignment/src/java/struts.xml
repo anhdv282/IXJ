@@ -9,5 +9,10 @@
         <action name="viewgroup" class="app.ViewGroupActionSupport">
             <result name="success">ViewGroup.jsp</result>
         </action>
+        <action name="viewSchedule" class="app.ViewScheduleActionSupport">
+            <result>schedule.jsp</result>
+            <result name="team">schedule.jsp</result>
+            <result name="date">schedule.jsp</result>
+        </action>
     </package>
 </struts>
