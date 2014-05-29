@@ -17,15 +17,16 @@ public class Match {
     private Venue venue;
     private Team home;
     private Team away;
+    private String date;
 
-    public Match(int id, String kickoff, int stage, Venue venue, Team home, Team away) {
-        this.id = id;
-        this.kickoff = kickoff;
-        this.stage = stage;
-        this.venue = venue;
-        this.home = home;
-        this.away = away;
+    public String getDate() {
+        return date;
     }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+    
 
     public Match() {
     }

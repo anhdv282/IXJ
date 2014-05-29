@@ -31,8 +31,8 @@
                 <h1><a href="#">World Cup 2014</a></h1>
                 <nav>
                     <ul>
-                        <li><a href="#">Teams</a></li>
-                        <li><a href="#">Schedule</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="viewSchedule">Schedule</a></li>
                         <li><a href="#" class="current">Group</a></li>
                         <li><a href="#">News</a></li>
                         <li><a href="#">Live</a></li>
@@ -45,11 +45,11 @@
         <section id="gallery">
             <div class="container">
                 <ul id="myRoundabout">
-                    <li><img src="images/3.jpg"></li>
+                    <li><img src="images/15.jpg"></li>
                     <li><img src="images/2.jpg"></li>
-                    <li><img src="images/5.jpg"></li>
+                    <li><img src="images/19.jpg"></li>
                     <li><img src="images/1.jpg"></li>
-                    <li><img src="images/4.jpg"></li>
+                    <li><img src="images/3.jpg"></li>
 
                 </ul>
             </div>
@@ -74,7 +74,7 @@
                             <s:iterator var="c" value="lst">
                                 <s:if test="%{#c.groupID == #g.id}">
                                     <tr>                                                                                
-                                        <td><img src="http://img.fifa.com/images/flags/3/${c.code}.png"/>  ${c.name}</td>
+                                        <td><img src="http://img.fifa.com/images/flags/3/${c.code}.png"/>  <a href="viewSchedule?team=${c.id}">${c.name}</a></td>
                                         <td>0</td>
                                         <td>0</td>
                                         <td>0</td>
