@@ -54,9 +54,9 @@ public class MatchDAL {
                 match.setId(Integer.parseInt(element.getElementsByTagName(ID).item(0).getTextContent()));
                 match.setKickoff(element.getElementsByTagName(KICKOFF).item(0).getTextContent());
                 match.setStage(Integer.parseInt(element.getElementsByTagName(STAGE).item(0).getTextContent()));
-                match.setTeam1(Integer.parseInt(element.getElementsByTagName(TEAM1ID).item(0).getTextContent()));
-                match.setTeam2(Integer.parseInt(element.getElementsByTagName(TEAM2ID).item(0).getTextContent()));
-                match.setVenue(Integer.parseInt(element.getElementsByTagName(VENUEID).item(0).getTextContent()));
+                match.setVenue(new VenueDAL().getVenueByID(Integer.parseInt(element.getElementsByTagName(VENUEID).item(0).getTextContent())));
+                    match.setHome(new TeamDAL().getTeambyID(Integer.parseInt(element.getElementsByTagName(TEAM1ID).item(0).getTextContent())));
+                    match.setAway(new TeamDAL().getTeambyID(Integer.parseInt(element.getElementsByTagName(TEAM2ID).item(0).getTextContent())));
                 lst.add(match);
             }
         } catch (ParserConfigurationException ex) {
@@ -86,9 +86,9 @@ public class MatchDAL {
                     match.setId(Integer.parseInt(element.getElementsByTagName(ID).item(0).getTextContent()));
                     match.setKickoff(element.getElementsByTagName(KICKOFF).item(0).getTextContent());
                     match.setStage(Integer.parseInt(element.getElementsByTagName(STAGE).item(0).getTextContent()));
-                    match.setTeam1(Integer.parseInt(element.getElementsByTagName(TEAM1ID).item(0).getTextContent()));
-                    match.setTeam2(Integer.parseInt(element.getElementsByTagName(TEAM2ID).item(0).getTextContent()));
-                    match.setVenue(Integer.parseInt(element.getElementsByTagName(VENUEID).item(0).getTextContent()));
+                    match.setVenue(new VenueDAL().getVenueByID(Integer.parseInt(element.getElementsByTagName(VENUEID).item(0).getTextContent())));
+                    match.setHome(new TeamDAL().getTeambyID(Integer.parseInt(element.getElementsByTagName(TEAM1ID).item(0).getTextContent())));
+                    match.setAway(new TeamDAL().getTeambyID(Integer.parseInt(element.getElementsByTagName(TEAM2ID).item(0).getTextContent())));
                     return match;
                 }
             }
@@ -120,9 +120,9 @@ public class MatchDAL {
                     match.setId(Integer.parseInt(element.getElementsByTagName(ID).item(0).getTextContent()));
                     match.setKickoff(element.getElementsByTagName(KICKOFF).item(0).getTextContent());
                     match.setStage(Integer.parseInt(element.getElementsByTagName(STAGE).item(0).getTextContent()));
-                    match.setTeam1(Integer.parseInt(element.getElementsByTagName(TEAM1ID).item(0).getTextContent()));
-                    match.setTeam2(Integer.parseInt(element.getElementsByTagName(TEAM2ID).item(0).getTextContent()));
-                    match.setVenue(Integer.parseInt(element.getElementsByTagName(VENUEID).item(0).getTextContent()));
+                    match.setVenue(new VenueDAL().getVenueByID(Integer.parseInt(element.getElementsByTagName(VENUEID).item(0).getTextContent())));
+                    match.setHome(new TeamDAL().getTeambyID(Integer.parseInt(element.getElementsByTagName(TEAM1ID).item(0).getTextContent())));
+                    match.setAway(new TeamDAL().getTeambyID(Integer.parseInt(element.getElementsByTagName(TEAM2ID).item(0).getTextContent())));
                     lst.add(match);
                 }
             }
@@ -154,9 +154,9 @@ public class MatchDAL {
                     match.setId(Integer.parseInt(element.getElementsByTagName(ID).item(0).getTextContent()));
                     match.setKickoff(element.getElementsByTagName(KICKOFF).item(0).getTextContent());
                     match.setStage(Integer.parseInt(element.getElementsByTagName(STAGE).item(0).getTextContent()));
-                    match.setTeam1(Integer.parseInt(element.getElementsByTagName(TEAM1ID).item(0).getTextContent()));
-                    match.setTeam2(Integer.parseInt(element.getElementsByTagName(TEAM2ID).item(0).getTextContent()));
-                    match.setVenue(Integer.parseInt(element.getElementsByTagName(VENUEID).item(0).getTextContent()));
+                    match.setVenue(new VenueDAL().getVenueByID(Integer.parseInt(element.getElementsByTagName(VENUEID).item(0).getTextContent())));
+                    match.setHome(new TeamDAL().getTeambyID(Integer.parseInt(element.getElementsByTagName(TEAM1ID).item(0).getTextContent())));
+                    match.setAway(new TeamDAL().getTeambyID(Integer.parseInt(element.getElementsByTagName(TEAM2ID).item(0).getTextContent())));
                     lst.add(match);
                 }
             }

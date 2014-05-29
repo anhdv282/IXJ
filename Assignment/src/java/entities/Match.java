@@ -11,20 +11,20 @@ package entities;
  * @author DANG
  */
 public class Match {
-    int id;
-    String kickoff;
-    int stage;
-    int team1;
-    int team2;
-    int venue;
+    private int id;
+    private String kickoff;
+    private int stage;
+    private Venue venue;
+    private Team home;
+    private Team away;
 
-    public Match(int id, String kickoff, int stage, int team1, int team2, int venue) {
+    public Match(int id, String kickoff, int stage, Venue venue, Team home, Team away) {
         this.id = id;
         this.kickoff = kickoff;
         this.stage = stage;
-        this.team1 = team1;
-        this.team2 = team2;
         this.venue = venue;
+        this.home = home;
+        this.away = away;
     }
 
     public Match() {
@@ -54,27 +54,29 @@ public class Match {
         this.stage = stage;
     }
 
-    public int getTeam1() {
-        return team1;
-    }
-
-    public void setTeam1(int team1) {
-        this.team1 = team1;
-    }
-
-    public int getTeam2() {
-        return team2;
-    }
-
-    public void setTeam2(int team2) {
-        this.team2 = team2;
-    }
-
-    public int getVenue() {
+    public Venue getVenue() {
         return venue;
     }
 
-    public void setVenue(int venue) {
+    public void setVenue(Venue venue) {
         this.venue = venue;
     }
+
+    
+    public Team getHome() {
+        return home;
+    }
+
+    public void setHome(Team home) {
+        this.home = home;
+    }
+
+    public Team getAway() {
+        return away;
+    }
+
+    public void setAway(Team away) {
+        this.away = away;
+    }
+    
 }

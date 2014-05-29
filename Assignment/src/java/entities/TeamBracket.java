@@ -11,9 +11,9 @@ package entities;
  * @author DANG
  */
 public class TeamBracket {
-    int id;
-    String label;
-    int team;
+    private int id;
+    private String label;
+    private int team;
 
     public int getId() {
         return id;

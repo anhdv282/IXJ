@@ -27,9 +27,9 @@
                     <td>${m.id}</a></td>
                     <td>${m.stage}</td>
                     <td>${m.kickoff}</td>
-                    <td>${m.team1}</td>
-                    <td>${m.team2}</td>
-                    <td>${m.venue}</td>
+                    <td>${m.home.name}</td>
+                    <td>${m.away.name}</td>
+                    <td>${m.venue.name}</td>
                 </tr>
             </s:iterator>
         </table>

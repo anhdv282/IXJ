@@ -31,7 +31,7 @@
                 <s:if test="%{#c.groupID == #g.id}">
                 <tr>                                        
                     <td><img src="http://img.fifa.com/images/flags/3/${c.code}.png"/></td>
-                    <td>${c.name}</td>
+                    <td><a href="viewSchedule?team=${c.id}">${c.name}</a></td>
                     <td>0</td>
                     <td>0</td>
                     <td>0</td>

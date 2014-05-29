@@ -11,10 +11,10 @@ package entities;
  * @author DANG
  */
 public class Team {
-    String code;
-    int groupID;
-    int ID;
-    String name;
+    private String code;
+    private int groupID;
+    private int id;
+    private String name;
 
     public String getCode() {
         return code;
@@ -32,12 +32,12 @@ public class Team {
         this.groupID = groupID;
     }
 
-    public int getID() {
-        return ID;
+    public int getId() {
+        return id;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -54,7 +54,7 @@ public class Team {
     public Team(String code, int groupID, int ID, String name) {
         this.code = code;
         this.groupID = groupID;
-        this.ID = ID;
+        this.id = ID;
         this.name = name;
     }
     

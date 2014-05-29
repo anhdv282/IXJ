@@ -11,9 +11,9 @@ package entities;
  * @author DANG
  */
 public class Venue {
-    String city;
-    int id;
-    String name;
+    private String city;
+    private int id;
+    private String name;
 
     public String getCity() {
         return city;

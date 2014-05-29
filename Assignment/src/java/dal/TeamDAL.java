@@ -50,7 +50,7 @@ public class TeamDAL {
                 Node temp = nodeList.item(i);
                 Element element = (Element)temp;
                 Team team = new Team();
-                team.setID(Integer.parseInt(element.getElementsByTagName(ID).item(0).getTextContent()));
+                team.setId(Integer.parseInt(element.getElementsByTagName(ID).item(0).getTextContent()));
                 team.setCode(element.getElementsByTagName(CODE).item(0).getTextContent());
                 team.setGroupID(Integer.parseInt(element.getElementsByTagName(GROUPID).item(0).getTextContent()));
                 team.setName(element.getElementsByTagName(NAME).item(0).getTextContent());
@@ -66,6 +66,39 @@ public class TeamDAL {
         
         return lst;
     }
+    
+    public Team getTeambyID(int id) {
+        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+        ServletContext context = ServletActionContext.getServletContext();
+        String path = context.getRealPath("/xml/team.xml");
+        DocumentBuilder builder;
+        try {
+            builder = dbf.newDocumentBuilder();
+            File f = new File(path);
+            Document doc = builder.parse(f);
+            NodeList nodeList = doc.getElementsByTagName(GROUP);
+            for (int i = 0; i < nodeList.getLength(); i++) {
+                Node temp = nodeList.item(i);
+                Element element = (Element)temp;
+                if(Integer.parseInt(element.getElementsByTagName(ID).item(0).getTextContent()) == id){
+                    Team team = new Team();
+                    team.setId(Integer.parseInt(element.getElementsByTagName(ID).item(0).getTextContent()));
+                    team.setCode(element.getElementsByTagName(CODE).item(0).getTextContent());
+                    team.setGroupID(Integer.parseInt(element.getElementsByTagName(GROUPID).item(0).getTextContent()));
+                    team.setName(element.getElementsByTagName(NAME).item(0).getTextContent());
+                    return team;
+                }
+            }
+        } catch (ParserConfigurationException ex) {
+            Logger.getLogger(TeamDAL.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SAXException ex) {
+            Logger.getLogger(TeamDAL.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(TeamDAL.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+    
     public List<Team> teamDataByGroup(int group){
         List<Team> lst = new ArrayList<>();
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
@@ -82,7 +115,7 @@ public class TeamDAL {
                 Element element = (Element)temp;
                 Team team = new Team();
                 if(Integer.parseInt(element.getElementsByTagName(GROUPID).item(0).getTextContent())==group){
-                    team.setID(Integer.parseInt(element.getElementsByTagName(ID).item(0).getTextContent()));
+                    team.setId(Integer.parseInt(element.getElementsByTagName(ID).item(0).getTextContent()));
                     team.setCode(element.getElementsByTagName(CODE).item(0).getTextContent());
                     team.setGroupID(Integer.parseInt(element.getElementsByTagName(GROUPID).item(0).getTextContent()));
                     team.setName(element.getElementsByTagName(NAME).item(0).getTextContent());

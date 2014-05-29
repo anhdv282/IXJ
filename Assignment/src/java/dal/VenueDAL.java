@@ -39,7 +39,7 @@ public class VenueDAL {
         List<Venue> venues = new ArrayList<>();
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         ServletContext context = ServletActionContext.getServletContext();
-        String path = context.getRealPath("/xml/group.xml");
+        String path = context.getRealPath("/xml/venue.xml");
         try {
             DocumentBuilder builder = dbf.newDocumentBuilder();
             File f = new File(path);
@@ -67,7 +67,7 @@ public class VenueDAL {
     public Venue getVenueByID(int id) {
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         ServletContext context = ServletActionContext.getServletContext();
-        String path = context.getRealPath("/xml/group.xml");
+        String path = context.getRealPath("/xml/venue.xml");
         try {
             DocumentBuilder builder = dbf.newDocumentBuilder();
             File f = new File(path);
