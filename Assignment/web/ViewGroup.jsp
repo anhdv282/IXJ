@@ -31,7 +31,7 @@
                 <h1><a href="#">World Cup 2014</a></h1>
                 <nav>
                     <ul>
-                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Teams</a></li>
                         <li><a href="#">Schedule</a></li>
                         <li><a href="#" class="current">Group</a></li>
                         <li><a href="#">News</a></li>
